@@ -1,0 +1,22 @@
+.header{
+    background-image:linear-gradient(to right bottom, rgba($color_primary-light, 0.7), rgba($color_primary-dark, 0.7)),url("../img/bgTwo.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 85%);
+
+    &__logoBox{
+        width: 12rem;
+        height: 12rem;
+    }
+
+    &__logo{
+        height: 3.5rem;
+        margin: 3.5rem 5rem;
+    }
+    
+    &__textBox{
+        text-align: center;
+        padding-bottom: 5rem;
+    }
+}

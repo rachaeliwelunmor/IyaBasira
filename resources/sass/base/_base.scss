@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    // outline: .1rem solid salmon; 
+}
+
+*:hover{
+    cursor: default;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    padding: 2rem;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}

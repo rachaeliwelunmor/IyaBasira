@@ -1,0 +1,69 @@
+body{
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color_medium-grey;
+}
+
+.heading-main{
+    color: $color-white;
+    width: 50%;
+    margin: 6% auto 3%;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+
+    &--big{
+        display: block;
+        font-size: 6rem;
+        font-weight: 500;
+        letter-spacing: 2rem;
+        animation-name: moveNameLeft;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+    }
+    
+    &--small{
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 500;
+        letter-spacing:.5rem;
+        padding-right: 1rem; 
+        animation-name: moveNameRight;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+    }
+}
+
+.heading-secondary{
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color_primary-light, $color_primary-dark);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    letter-spacing: .2rem;
+    color: transparent;
+    transition: all .7s;
+
+    &:hover{
+        transform: skewX(10deg) skewY(10deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, 0.2);
+        cursor: pointer;
+    }
+}
+
+.heading-tertiary{
+    font-size: $default-fontSize;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph{
+    font-size: 1.6rem;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
