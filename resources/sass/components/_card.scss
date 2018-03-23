@@ -1,0 +1,150 @@
+.card{
+    perspective: 150rem;
+    position: relative;
+    height: 50rem;
+
+    &__side{ 
+        height: 50rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+        transition: all .7s ease-in-out;
+
+        &--front{
+            background-color: $color-white;
+        }
+            
+        &--back{
+            transform: rotateY(180deg);
+
+            &-1{
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+
+            &-2{
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+            }
+
+            &-3{
+                background-image: linear-gradient(to right bottom, $color-fourth-light, $color-fourth-dark);
+            }
+        }
+    }
+
+    &__picture{
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: color;
+        clip-path: polygon(0 100%, 0 0, 100% 0, 100% 82%);
+
+        &--1{
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),url("../img/card1.jpeg");
+        }
+
+        &--2{
+            background-blend-mode: multiply;
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url("../img/card2.jpeg");
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, $color-fourth-light, $color-fourth-dark), url("../img/card3.jpeg");
+        }
+    }
+
+    &__heading{
+        text-transform: uppercase;
+        color: $color-white;
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-align: left;
+        line-height: 30px;
+        position: absolute;
+        top: 15.4rem;
+        left: 1rem;
+        width: 40%;
+    }
+
+    &__headingSpan{
+
+        -webkit-box-decoration-break: clone;
+
+        &--1{
+            background-image: linear-gradient(to right bottom,rgba($color-secondary-light, .5), rgba($color-secondary-dark, .5));
+            padding: 0 0.3rem;
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom,rgba($color-tertiary-light, .5), rgba($color-tertiary-dark, .5));
+            padding: 0 0.5rem;
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom,rgba($color-fourth-light, .5), rgba($color-fourth-dark, .5));
+            padding: 0 0.5rem;
+        }
+    }
+
+    &__details{
+        font-size: 1.4rem;
+        text-align: center;
+        ul{
+           list-style: none;
+           width: 75%;
+           margin: 0 auto; 
+            li{
+                padding: 1rem;
+                &:not(:last-child){
+                    border-bottom: 1px solid #eeeeee;
+                }
+
+                span{
+                    color: $color-secondary-dark;
+                }
+            }
+        }
+    }
+
+
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+
+        a{
+            color: $color_medium-grey;
+        }
+    }
+
+    &__price{
+        &--box{
+            margin-bottom: 8rem;
+            color: $color-white;
+        }
+
+        &--text{
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        &--amount{
+            font-size: 5rem;
+            font-weight: 100;
+        }
+    }
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+}

@@ -1,5 +1,54 @@
 .section__aboutUs{
     background-color: $color-grey-light;
-    padding: 15rem;
+    padding: 12rem 14rem 15rem;
     margin-top: -15vh;
+}
+
+.section__features{
+    background-image:linear-gradient(to right bottom, rgba($color_primary-light, 0.7), 
+                     rgba($color_primary-dark, 0.7)), url("../img/bgThree.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 15rem 10rem;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    & > *{
+        transform: skewY(7deg);
+    }
+}
+
+.section__tours{
+    background-color: $color-grey-light;
+    padding: 15rem 10rem 9rem;
+    margin-top: -8rem;
+}
+
+.section__review{
+    overflow: hidden;
+    position: relative;
+    padding: 8rem 0;
+
+    a.review__button{
+        color: $color-white;
+    }
+}
+
+.section__contact{
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color_primary-light, $color_primary-dark);
+}
+
+.contact{
+    background-image: linear-gradient( 105deg, rgba($color-white, .8) 0%, rgba($color-white, .8) 50%, transparent 50%), url("../img/bg-contact.jpg");
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.3);
+ 
+
+
+    &__form{
+        width: 50%;
+        padding: 5rem;
+    }
 }

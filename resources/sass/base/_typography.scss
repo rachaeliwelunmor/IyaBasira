@@ -35,9 +35,11 @@ body{
 }
 
 .heading-secondary{
+    transition: all 300ms ease-in;
     text-transform: uppercase;
     font-size: 3rem;
     font-weight: 700;
+    padding: 4rem 0;
     display: inline-block;
     background-image: linear-gradient(to right, $color_primary-light, $color_primary-dark);
     -webkit-background-clip: text;
@@ -45,7 +47,6 @@ body{
     background-clip: text;
     letter-spacing: .2rem;
     color: transparent;
-    transition: all .7s;
 
     &:hover{
         transform: skewX(10deg) skewY(10deg) scale(1.1);

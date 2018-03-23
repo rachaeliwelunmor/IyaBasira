@@ -1,5 +1,6 @@
 .btn{
 
+    &,
     &:link,
     &:visited{
         text-decoration: none;
@@ -24,17 +25,28 @@
         }
     }
 
-    &:active{
+    &:active,
+    &:focus{
+        outline: none;
         transform: translateY(-.1rem);
         box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
     }
     
     &--white{
-        background-color: #FFFFFF;
+        background-color: $color-white;
         color: $color_primary-dark;
 
         &::after{
             background-color: $color-white;
+        }
+    }
+
+    &--green{
+        background-color: $color_primary;
+        color: $color-white;
+
+        &::after{
+            background-color: $color_primary;
         }
     }
     
